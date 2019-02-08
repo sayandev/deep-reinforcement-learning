@@ -4,9 +4,9 @@
 
 # Project report
 
-### Introduction
+### Project's goal
 
-For this project, you will train an agent to navigate (and collect bananas!) in a large, square world.  
+In this project, the goal is to train an agent to navigate a virtual world and collect as many yellow bananas as possible while avoiding blue bananas.
 
 ![Trained Agent][image1]
 
