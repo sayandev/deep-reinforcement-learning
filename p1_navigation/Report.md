@@ -18,7 +18,14 @@ The learning algorithm is implemented following the vanilla Deep Q Learning as d
 - Fully connected layer - input: 128 output 64
 - Fully connected layer - input: 64 output: (Action Size)
 
-### Instructions
+### Code implementation
+The code used here is derived from the tutorial from the [Deep Reinforcement Learning Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893), and has been slightly adjusted for being used with the banana environment.
+
+### Parameters used in DQN algorithm:
+
+- Fully connected layer - input: 37 (State Size) output: 128
+- Fully connected layer - input: 128 output 64
+- Fully connected layer - input: 64 output: (Action Size)
 
 Follow the instructions in `Navigation.ipynb` to get started with training your own agent!  
 
