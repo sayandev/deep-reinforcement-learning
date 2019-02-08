@@ -1,55 +1,80 @@
 [//]: # (Image References)
 
 [image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Trained Agent"
+[image2]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p1_navigation/score.png "Score"
 
-# Project 1: Navigation
+# Project report
 
-### Introduction
+### Project's goal
 
-For this project, you will train an agent to navigate (and collect bananas!) in a large, square world.  
+In this project, the goal is to train an agent to navigate a virtual world and collect as many yellow bananas as possible while avoiding blue bananas.
 
 ![Trained Agent][image1]
 
-A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.  Thus, the goal of your agent is to collect as many yellow bananas as possible while avoiding blue bananas.  
+### Learning algorithm
 
-The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around agent's forward direction.  Given this information, the agent has to learn how to best select actions.  Four discrete actions are available, corresponding to:
-- **`0`** - move forward.
-- **`1`** - move backward.
-- **`2`** - turn left.
-- **`3`** - turn right.
+The learning algorithm is implemented following the vanilla Deep Q Learning as described in published paper. As an input the vector of state is used instead of an image so convolutional neural nework is replaced with deep neural network. The deep neural network has following layers:
 
-The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.
+- Fully connected layer - input: 37 (State Size) output: 128
+- Fully connected layer - input: 128 output 64
+- Fully connected layer - input: 64 output: (Action Size)
 
-### Getting Started
+### Code implementation
+The code used here is derived from the tutorial from the [Deep Reinforcement Learning Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893), and has been slightly adjusted for being used with the banana environment.
 
-1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
-    - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
-    - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
-    - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
-    - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
-    
-    (_For Windows users_) Check out [this link](https://support.microsoft.com/en-us/help/827218/how-to-determine-whether-a-computer-is-running-a-32-bit-version-or-64) if you need help with determining if your computer is running a 32-bit version or 64-bit version of the Windows operating system.
+The code consist of :
 
-    (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux_NoVis.zip) to obtain the environment.
+- navigation_solution.ipynb: This Jupyter notebooks allows to train the agent and test the performace. 
+- model_qnet.py: In this python file, a PyTorch QNetwork class is implemented. 
+- agent_dqn.py: In this python file, a DQN agent and a Replay Buffer memory used by the DQN agent is build.
 
-2. Place the file in the DRLND GitHub repository, in the `p1_navigation/` folder, and unzip (or decompress) the file. 
 
-### Instructions
+### DQN parameters and results
 
-Follow the instructions in `Navigation.ipynb` to get started with training your own agent!  
+- BUFFER_SIZE = int(1e5)  # replay buffer size
+- BATCH_SIZE = 64         # minibatch size
+- GAMMA = 0.99            # discount factor
+- TAU = 1e-3              # for soft update of target parameters
+- LR = 5e-4               # learning rate 
+- UPDATE_EVERY = 4        # how often to update the network
+- Maximum steps per episode: 1000
+- Starting epsilion: 1.0
+- Ending epsilion: 0.01
+- Epsilion decay rate: 0.999
 
-### (Optional) Challenge: Learning from Pixels
+### Results
 
-After you have successfully completed the project, if you're looking for an additional challenge, you have come to the right place!  In the project, your agent learned from information such as its velocity, along with ray-based perception of objects around its forward direction.  A more challenging task would be to learn directly from pixels!
+![Score][image2]
 
-To solve this harder task, you'll need to download a new Unity environment.  This environment is almost identical to the project environment, where the only difference is that the state is an 84 x 84 RGB image, corresponding to the agent's first-person view.  (**Note**: Udacity students should not submit a project with this new environment.)
+Episode 100	Average Score: 0.19
+Episode 200	Average Score: 0.93
+Episode 300	Average Score: 1.44
+Episode 400	Average Score: 2.35
+Episode 500	Average Score: 3.55
+Episode 600	Average Score: 4.53
+Episode 700	Average Score: 5.42
+Episode 800	Average Score: 6.37
+Episode 900	Average Score: 6.95
+Episode 1000	Average Score: 7.60
+Episode 1100	Average Score: 7.58
+Episode 1200	Average Score: 8.40
+Episode 1300	Average Score: 8.81
+Episode 1400	Average Score: 9.85
+Episode 1500	Average Score: 10.53
+Episode 1600	Average Score: 10.00
+Episode 1700	Average Score: 11.01
+Episode 1800	Average Score: 11.82
+Episode 1900	Average Score: 11.28
+Episode 2000	Average Score: 11.97
+Episode 2100	Average Score: 12.54
+Episode 2163	Average Score: 13.04
+Environment solved in 2063 episodes!	Average Score: 13.04
 
-You need only select the environment that matches your operating system:
-- Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Linux.zip)
-- Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana.app.zip)
-- Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Windows_x86.zip)
-- Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Windows_x86_64.zip)
+### Ideas for future work
+- Extensive hyperparameter optimization
+- Double DQN
+- Dueling DQN
+- Prioritized experience replay
+- Learning from pixels
 
-Then, place the file in the `p1_navigation/` folder in the DRLND GitHub repository, and unzip (or decompress) the file.  Next, open `Navigation_Pixels.ipynb` and follow the instructions to learn how to use the Python API to control the agent.
 
-(_For AWS_) If you'd like to train the agent on AWS, you must follow the instructions to [set up X Server](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), and then download the environment for the **Linux** operating system above.
