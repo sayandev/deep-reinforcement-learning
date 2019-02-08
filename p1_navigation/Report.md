@@ -46,6 +46,30 @@ The code consist of :
 
 ![Score][image2]
 
+Episode 100	Average Score: 0.19
+Episode 200	Average Score: 0.93
+Episode 300	Average Score: 1.44
+Episode 400	Average Score: 2.35
+Episode 500	Average Score: 3.55
+Episode 600	Average Score: 4.53
+Episode 700	Average Score: 5.42
+Episode 800	Average Score: 6.37
+Episode 900	Average Score: 6.95
+Episode 1000	Average Score: 7.60
+Episode 1100	Average Score: 7.58
+Episode 1200	Average Score: 8.40
+Episode 1300	Average Score: 8.81
+Episode 1400	Average Score: 9.85
+Episode 1500	Average Score: 10.53
+Episode 1600	Average Score: 10.00
+Episode 1700	Average Score: 11.01
+Episode 1800	Average Score: 11.82
+Episode 1900	Average Score: 11.28
+Episode 2000	Average Score: 11.97
+Episode 2100	Average Score: 12.54
+Episode 2163	Average Score: 13.04
+Environment solved in 2063 episodes!	Average Score: 13.04
+
 ### Ideas for future work
 - Extensive hyperparameter optimization
 - Double DQN
