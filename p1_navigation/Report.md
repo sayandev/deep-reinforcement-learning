@@ -14,6 +14,9 @@ In this project, the goal is to train an agent to navigate a virtual world and c
 
 The learning algorithm is implemented following the vanilla Deep Q Learning as described in published paper. As an input the vector of state is used instead of an image so convolutional neural nework is replaced with deep neural network. The deep neural network has following layers:
 
+- Fully connected layer - input: 37 (State Size) output: 128
+- Fully connected layer - input: 128 output 64
+- Fully connected layer - input: 64 output: (Action Size)
 
 ### Instructions
 
