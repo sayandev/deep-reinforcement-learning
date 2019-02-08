@@ -1,6 +1,7 @@
 [//]: # (Image References)
 
 [image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Trained Agent"
+[image2]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p1_navigation/score.png "Score"
 
 # Project report
 
@@ -21,26 +22,35 @@ The learning algorithm is implemented following the vanilla Deep Q Learning as d
 ### Code implementation
 The code used here is derived from the tutorial from the [Deep Reinforcement Learning Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893), and has been slightly adjusted for being used with the banana environment.
 
-### Parameters used in DQN algorithm:
+The code consist of :
 
-- Fully connected layer - input: 37 (State Size) output: 128
-- Fully connected layer - input: 128 output 64
-- Fully connected layer - input: 64 output: (Action Size)
+- navigation_solution.ipynb: This Jupyter notebooks allows to train the agent and test the performace. 
+- model_qnet.py: In this python file, a PyTorch QNetwork class is implemented. 
+- agent_dqn.py: In this python file, a DQN agent and a Replay Buffer memory used by the DQN agent is build.
 
-Follow the instructions in `Navigation.ipynb` to get started with training your own agent!  
 
-### (Optional) Challenge: Learning from Pixels
+### DQN parameters and results
 
-After you have successfully completed the project, if you're looking for an additional challenge, you have come to the right place!  In the project, your agent learned from information such as its velocity, along with ray-based perception of objects around its forward direction.  A more challenging task would be to learn directly from pixels!
+- BUFFER_SIZE = int(1e5)  # replay buffer size
+- BATCH_SIZE = 64         # minibatch size
+- GAMMA = 0.99            # discount factor
+- TAU = 1e-3              # for soft update of target parameters
+- LR = 5e-4               # learning rate 
+- UPDATE_EVERY = 4        # how often to update the network
+- Maximum steps per episode: 1000
+- Starting epsilion: 1.0
+- Ending epsilion: 0.01
+- Epsilion decay rate: 0.999
 
-To solve this harder task, you'll need to download a new Unity environment.  This environment is almost identical to the project environment, where the only difference is that the state is an 84 x 84 RGB image, corresponding to the agent's first-person view.  (**Note**: Udacity students should not submit a project with this new environment.)
+### Results
 
-You need only select the environment that matches your operating system:
-- Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Linux.zip)
-- Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana.app.zip)
-- Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Windows_x86.zip)
-- Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Windows_x86_64.zip)
+![Score][image2]
 
-Then, place the file in the `p1_navigation/` folder in the DRLND GitHub repository, and unzip (or decompress) the file.  Next, open `Navigation_Pixels.ipynb` and follow the instructions to learn how to use the Python API to control the agent.
+### Ideas for future work
+- Extensive hyperparameter optimization
+- Double DQN
+- Dueling DQN
+- Prioritized experience replay
+- Learning from pixels
 
-(_For AWS_) If you'd like to train the agent on AWS, you must follow the instructions to [set up X Server](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), and then download the environment for the **Linux** operating system above.
+
