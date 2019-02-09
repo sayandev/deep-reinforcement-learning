@@ -71,12 +71,16 @@ The code consist of :
 
 - Learning from pixels
 
-In the [Deep Reinforcement Learning Nanodegree course](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893), a further evolution of this project been suggested, where the agent will be trained directly from the environment's observed raw pixels instead of using the environment's internal states (37 dimensions). To achieve that a Convolutional Neural Network would be added at the input of the network in order to process the raw pixels values following image preprocessing such as rescaling the image size, converting RGB to gray scale etc.
+In the [Deep Reinforcement Learning Nanodegree course](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893), a possible extension of this project been suggested, where the agent will be trained directly from the environment's observed raw pixels instead of using the environment's internal states (37 dimensions). To achieve that a Convolutional Neural Network would be added at the input of the network in order to process the raw pixels values following image preprocessing such as rescaling the image size, converting RGB to gray scale etc.
 
-- Extensive hyperparameter optimization
 - Double DQN
+
+The vanila flavour Q-learning algorithm is known to overestimate action values under certain conditions. It was not previously known whether, in practice, such overestimations are common, whether they harm performance, and whether they can generally be prevented. In [Deep Reinforcement Learning with Double Q-learning](https://arxiv.org/abs/1509.06461) paper, the authors answer all these questions affirmatively. In particular, they first show that the recent DQN algorithm, which combines Q-learning with a deep neural network, suffers from substantial overestimations in some games in the Atari 2600 domain. Then it has been shown that the idea behind the Double Q-learning algorithm, which was introduced in a tabular setting, can be generalized to work with large-scale function approximation. The authors' propose a specific adaptation to the DQN algorithm and show that the resulting algorithm not only reduces the observed overestimations, as hypothesized, but that this also leads to much better performance on several games.
+
 - Dueling DQN
 - Prioritized experience replay
+- Extensive hyperparameter optimization
+
 
 
 
