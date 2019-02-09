@@ -49,6 +49,8 @@ The code consist of :
 
 ### DQN parameters and results
 
+The Neural Networks use the Adam optimizer and the following parameters values:
+
 - BUFFER_SIZE = int(1e5)  # replay buffer size
 - BATCH_SIZE = 64         # minibatch size
 - GAMMA = 0.99            # discount factor
@@ -56,11 +58,16 @@ The code consist of :
 - LR = 5e-4               # learning rate 
 - UPDATE_EVERY = 4        # how often to update the network
 - Maximum steps per episode: 1000
+
+Agent select next action based on Epsilon Greedy. At probability epsilon, agent select at random from action space. The value of epsilon is=>
 - Starting epsilion: 1.0
 - Ending epsilion: 0.01
 - Epsilion decay rate: 0.999
 
+
 ### Results
+
+Given the chosen architecture and parameters, the results :
 
 ![Score][image2]
 ![Score Report][image3]
