@@ -78,7 +78,16 @@ In the [Deep Reinforcement Learning Nanodegree course](https://www.udacity.com/c
 The vanila flavour Q-learning algorithm is known to overestimate action values under certain conditions. It was not previously known whether, in practice, such overestimations are common, whether they harm performance, and whether they can generally be prevented. In [Deep Reinforcement Learning with Double Q-learning](https://arxiv.org/abs/1509.06461) paper, the authors answer all these questions affirmatively. In particular, they first show that the recent DQN algorithm, which combines Q-learning with a deep neural network, suffers from substantial overestimations in some games in the Atari 2600 domain. Then it has been shown that the idea behind the Double Q-learning algorithm, which was introduced in a tabular setting, can be generalized to work with large-scale function approximation. The authors' propose a specific adaptation to the DQN algorithm and show that the resulting algorithm not only reduces the observed overestimations, as hypothesized, but that this also leads to much better performance on several games.
 
 - Dueling DQN
+
+In recent years there have been many successes of using deep representations in reinforcement learning. Still, many of these applications use conventional architectures, such as convolutional networks, LSTMs, or auto-encoders. In [Dueling Network Architectures for Deep Reinforcement Learning](https://arxiv.org/abs/1511.06581) paper, the authors presented a new neural network architecture for model-free reinforcement learning. The proposed dueling network represents two separate estimators: one for the state value function and one the other for the state-dependent action advantage function. The main benefit of this factoring is to generalize learning across actions without imposing any change to the underlying reinforcement learning algorithm. The results show that this architecture leads to better policy evaluation in the presence of many similar-valued actions. Moreover, the dueling architecture enables the proposed RL agent to outperform the state-of-the-art on the Atari 2600 domain.
+
 - Prioritized experience replay
+
+Experience replay lets online reinforcement learning agents remember and reuse experiences from the past. In prior work, experience transitions were uniformly sampled from a replay memory. However, [Prioritized Experience Replay
+](https://arxiv.org/abs/1511.05952) approach simply replays transitions at the same frequency that they were originally experienced, regardless of their significance. In [Prioritized Experience Replay
+](https://arxiv.org/abs/1511.05952) paper the authors develop a framework for prioritizing experience, so as to replay important transitions more frequently, and therefore learn more efficiently. The authors use prioritized experience replay in Deep Q-Networks (DQN), a reinforcement learning algorithm that achieved human-level performance across many Atari games. DQN with prioritized experience replay achieves a new state-of-the-art, outperforming DQN with uniform replay on 41 out of 49 games.
+
+
 - Extensive hyperparameter optimization
 
 
