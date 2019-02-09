@@ -12,6 +12,19 @@ In this project, the goal is to train an agent to navigate a virtual world and c
 
 ![Trained Agent][image1]
 
+
+### Algorithm
+
+In this project the task is solved utilizing a Value Based method; Deep Q-Networks. Deep Q Learning consist of 2 approaches :
+- A Reinforcement Learning method called [Q Learning](https://en.wikipedia.org/wiki/Q-learning) (SARSA max)
+- A Deep Neural Network to learn a [Q-table] (https://www.youtube.com/watch?time_continue=94&v=WQgdnzzhSLM) approximation (action-values)
+
+This includes the two following major training improvements by Deepmind and described in their Nature publication : ["Human-level control through deep reinforcement learning (2015)"](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf)
+
+- Experience Replay
+- Fixed Q Targets
+
+
 ### Learning algorithm
 
 The learning algorithm is implemented following the vanilla Deep Q Learning as described in published paper. As an input the vector of state is used instead of an image so convolutional neural nework is replaced with deep neural network. The deep neural network has following layers:
