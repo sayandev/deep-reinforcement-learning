@@ -90,6 +90,7 @@ Experience replay lets online reinforcement learning agents remember and reuse e
 
 - [Extensive hyperparameter optimization](https://medium.com/@mikkokotila/a-comprehensive-list-of-hyperparameter-optimization-tuning-solutions-88e067f19d9)
 
+Grid search of hyper-parameter, Q-value model.
 
 
 
