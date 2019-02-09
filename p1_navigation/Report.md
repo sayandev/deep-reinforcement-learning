@@ -88,7 +88,7 @@ Experience replay lets online reinforcement learning agents remember and reuse e
 ](https://arxiv.org/abs/1511.05952) paper the authors develop a framework for prioritizing experience, so as to replay important transitions more frequently, and therefore learn more efficiently. The authors use prioritized experience replay in Deep Q-Networks (DQN), a reinforcement learning algorithm that achieved human-level performance across many Atari games. DQN with prioritized experience replay achieves a new state-of-the-art, outperforming DQN with uniform replay on 41 out of 49 games.
 
 
-- Extensive hyperparameter optimization
+- [Extensive hyperparameter optimization](https://medium.com/@mikkokotila/a-comprehensive-list-of-hyperparameter-optimization-tuning-solutions-88e067f19d9)
 
 
 
