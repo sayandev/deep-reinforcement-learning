@@ -27,7 +27,7 @@ This includes the two following major training improvements by Deepmind and desc
 
 The steps of the algorithm (screenshot is taken from the [Deep Reinforcement Learning Nanodegree course](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893)) are listed below.
 
-!Pseudo Algo][image4]
+![Pseudo Algo][image4]
 
 ### Learning algorithm
 
