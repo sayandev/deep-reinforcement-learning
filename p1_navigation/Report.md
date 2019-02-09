@@ -68,10 +68,15 @@ The code consist of :
 
 
 ### Ideas for future work
+
+- Learning from pixels
+
+In the [Deep Reinforcement Learning Nanodegree course](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893), a further evolution of this project been suggested, where the agent will be trained directly from the environment's observed raw pixels instead of using the environment's internal states (37 dimensions). To achieve that a Convolutional Neural Network would be added at the input of the network in order to process the raw pixels values following image preprocessing such as rescaling the image size, converting RGB to gray scale etc.
+
 - Extensive hyperparameter optimization
 - Double DQN
 - Dueling DQN
 - Prioritized experience replay
-- Learning from pixels
+
 
 
