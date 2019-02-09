@@ -3,6 +3,7 @@
 [image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Trained Agent"
 [image2]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p1_navigation/score.png "Score"
 [image3]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p1_navigation/score_report.PNG "Score Report"
+[image4]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p1_navigation/DQN_pseudo_algo.png "Pseudo Algo"
 
 # Project report
 
@@ -24,6 +25,9 @@ This includes the two following major training improvements by Deepmind and desc
 - Experience Replay
 - Fixed Q Targets
 
+The steps of the algorithm (screenshot is taken from the [Deep Reinforcement Learning Nanodegree course](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893)) are listed below.
+
+!Pseudo Algo][image4]
 
 ### Learning algorithm
 
