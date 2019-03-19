@@ -9,3 +9,9 @@
 ### Project's goal
 
 In this environment called Reacher, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal the agent is to maintain its position at the target location for as many time steps as possible. Additional information can be found [here](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher).
+
+The observation space consists of Each action is a vector with four numbers,
+
+- State space is 33 dimensional continuous vector, consisting of position, rotation, velocity, and angular velocities of the arm.
+- Action space is 4 dimentional continuous vector, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
+- Solution criteria: the environment is considered as solved when the agent gets an average score of +30 over 100 consecutive episodes (averaged over all agents in case of multiagent environment).
