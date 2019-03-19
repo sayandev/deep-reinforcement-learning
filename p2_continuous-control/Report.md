@@ -44,3 +44,18 @@ The actor contributes in continious action space without need for extra layer of
 
 **Critic model :** Similar to Actor model except the final layer is fully connected hich performs state -> argmax_Q  mapping.
 
+**Hyper Parameter :** The actual configuration of the hyperparameters is:
+
+- Learning Rate: 1e-3 (in both Actor & Critic) soft update of target
+- Batch Size: 1024 with max time step of 1000 in each episode.
+- Replay Buffer: 1e6
+- Gamma: 0.99 with weight decay set to 0
+
+### Project Implemenation
+
+- Continuous_Control_Solution.ipynb - main file where the program execution starts.
+- ddpg_agent.py - agent class implementation.
+- models.py - neural network implementations (PyTorch)
+
+#### Result
+
