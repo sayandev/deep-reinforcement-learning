@@ -23,4 +23,12 @@ The observation space consists of Each action is a vector with four numbers:
 
 This project is an extension of the earlier project in applying [Deep Q Network](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf) to solve single agent navigation envuiornment, however this project has a more complex enviornment with continious action spaces and involved multiple agents. [Continuous control with deep reinforcement learning](https://arxiv.org/abs/1509.02971) been used to solve this project utilzing some [refiniment](https://blogs.unity3d.com/2018/09/11/ml-agents-toolkit-v0-5-new-resources-for-ai-researchers-available-now/). 
 
+DDPG algorithm is summarized below: 
+
+![Pseudo Algo][image3]
+
 DDPG is a model free policy based learning algorithm in which the agent can learn competitive policies for all of the tasks using low-dimensional observations (e.g. cartesian coordinates or joint angles) using the same hyper-parameters and network structure without knowing the domain dynamic information. Thus the same algorithm can be applied across domains which is quite an accomplishmet with respect to traditional planning algorithms. While DQN solves problems with high-dimensional observation spaces, it can only handle discrete and low-dimensional action spaces. Many tasks of interest, most notably physical control tasks, have continuous (real valued) and high dimensional action spaces. DQN cannot be straightforwardly applied to continuous domains since it relies on a finding the action that maximizes the action-value function, which in the continuous valued case requires an iterative optimization process at every step. DDPG combine the actor-critic approach with insights from the recent success of [Deep Q Network](https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf); where the critic learns the value function alike DQN and uses it to determine the Actor's policy based model should change. The actor contributes in continious action space without need for extra layer of optimization procedures require in value based function while the critic provides the actor with the performance metrics. 
+
+
+### Model Architecture
+
