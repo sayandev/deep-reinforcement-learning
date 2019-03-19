@@ -67,3 +67,12 @@ The DDPG agent took 102 Episodes to achieve the average rewards of 30.13 in appr
 In the screenshot of the trained DDPG agents we can see thay are pretty well in tracing the moving target location for all 20 arms.
 
 ![TrainedAgentUnityScreenshot][image6] 
+
+
+### Future Work
+
+- Use a deeper network.
+- Tst the implementation using raw pixels.
+- Use some form of curiosity to [favorize exploration](https://arxiv.org/abs/1808.04355)
+- Trying out Proximal Policy Optimisation
+- The DDPG algorithm can be improved and robust by applying [rioritized experience replay](https://ieeexplore.ieee.org/document/8122622).
