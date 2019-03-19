@@ -59,3 +59,5 @@ The actor contributes in continious action space without need for extra layer of
 
 #### Result
 
+The DDPG agent took 102 Episodes to achieve the average rewards of 30.13 in approximately 1 hour 45 minutes. 
+![Score][image2]
