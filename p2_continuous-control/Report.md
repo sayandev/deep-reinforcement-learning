@@ -55,9 +55,9 @@ The actor contributes in continuous action space without need for extra layer of
 
 ### Project Implemenation
 
-- Continuous_Control_Solution.ipynb - main file where the program execution starts.
+- Continuous_Control_Solution.ipynb - This Jupyter notebooks allows to train the agent and test the performace.
 - ddpg_agent.py - agent class implementation.
-- models.py - neural network implementations (PyTorch)
+- models.py - neural network implementations (PyTorch).
 
 #### Result
 
