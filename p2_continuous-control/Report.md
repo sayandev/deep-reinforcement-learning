@@ -63,5 +63,7 @@ The actor contributes in continious action space without need for extra layer of
 
 The DDPG agent took 102 Episodes to achieve the average rewards of 30.13 in approximately 1 hour 45 minutes. 
 ![Score][image2]
+
 In the screenshot of the trained DDPG agents we can see thay are pretty well in tracing the moving target location for all 20 arms.
+
 ![TrainedAgentUnityScreenshot][image6] 
