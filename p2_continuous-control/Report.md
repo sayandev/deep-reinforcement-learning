@@ -5,6 +5,8 @@
 [image3]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/ddpg_pseudo_algo.png "Pseudo Algo"
 [image4]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/ddpg_critic_loss.png "ddpg_critic_loss"
 [image5]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/ddpg_actor_loss.png "ddpg_actor_loss"
+[image5]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/ddpg_actor_loss.png "ddpg_actor_loss"
+[image6]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/TrainedAgentUnityScreenshot.png "TrainedAgentUnityScreenshot"
 
 # Project report
 
@@ -61,3 +63,5 @@ The actor contributes in continious action space without need for extra layer of
 
 The DDPG agent took 102 Episodes to achieve the average rewards of 30.13 in approximately 1 hour 45 minutes. 
 ![Score][image2]
+In the screenshot of the trained DDPG agents we can see thay are pretty well in tracing the moving target location for all 20 arms.
+![TrainedAgentUnityScreenshot][image6] 
