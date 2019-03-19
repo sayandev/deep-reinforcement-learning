@@ -69,7 +69,7 @@ In the screenshot of the trained DDPG agents we can see thay are pretty well in 
 ![TrainedAgentUnityScreenshot][image6] 
 
 
-### Future Work
+### Ideas for Future Work
 
 - Use a deeper network.
 - Test the implementation using raw pixels.
