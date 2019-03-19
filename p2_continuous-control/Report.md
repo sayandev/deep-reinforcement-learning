@@ -38,3 +38,9 @@ The actor contributes in continious action space without need for extra layer of
 
 ### Model Architecture
 
+20 individual DDPG agents corresponding to 20 agents in the enviornment and a single replay buffer shared by all the 20 DDPG agents. Later switched to a single DDPG agent with one replay buffer that has experiences collected from all 20 DDPG agents. Which results is to train a single brain rather than 20 brains which will be definitely quicker and having a single source of decision making will result in better performance with time. This scheme results in robust and better performance. However, in distributed enviornemnt training the brains sepeartely might be more sclabale.
+
+**Actor model :** Neural network with 2 hidden layers with 400 and 300 hidden nodes respectively; _tanh_ activation function been used in the last layer which performs state -> action mapping. Batch Normalization regularization technique been used for mini batch training.
+
+**Critic model :** Similar to Actor model except the final layer is fully connected hich performs state -> argmax_Q  mapping.
+
