@@ -25,7 +25,7 @@ The observation space consists of each action is a vector with four numbers:
 
 ### Algorithm
 
-This project is an extension of the earlier project in applying [Deep Q Network](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf) to solve single agent navigation environment, however this project has a more complex environment with continuous action spaces and involved multiple agents. [Continuous control with deep reinforcement learning](https://arxiv.org/abs/1509.02971) been used to solve this project utilzing some [refinement](https://blogs.unity3d.com/2018/09/11/ml-agents-toolkit-v0-5-new-resources-for-ai-researchers-available-now/). 
+This project is an extension of the earlier project in applying [Deep Q Network](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf) to solve single agent navigation environment, however this project has a more complex environment with continuous action spaces and involved multiple agents. [Continuous control with deep reinforcement learning](https://arxiv.org/abs/1509.02971) been used to solve this project utilizing  some [refinements](https://blogs.unity3d.com/2018/09/11/ml-agents-toolkit-v0-5-new-resources-for-ai-researchers-available-now/). 
 
 DDPG algorithm is summarized below: 
 
