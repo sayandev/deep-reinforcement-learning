@@ -72,7 +72,7 @@ In the screenshot of the trained DDPG agents we can see thay are pretty well in 
 ### Future Work
 
 - Use a deeper network.
-- Tst the implementation using raw pixels.
-- Use some form of curiosity to [favorize exploration](https://arxiv.org/abs/1808.04355)
-- Trying out Proximal Policy Optimisation
-- The DDPG algorithm can be improved and robust by applying [Prioritized experience replay](https://ieeexplore.ieee.org/document/8122622).
+- Test the implementation using raw pixels.
+- Incorporate some form of curiosity to [favorize exploration](https://arxiv.org/abs/1808.04355).
+- Trying out [Proximal Policy Optimization](https://arxiv.org/abs/1707.06347).
+- The DDPG algorithm can be improved (robust) by applying [Prioritized experience replay](https://ieeexplore.ieee.org/document/8122622).
