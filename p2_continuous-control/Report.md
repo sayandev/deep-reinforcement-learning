@@ -6,7 +6,7 @@
 [image4]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/ddpg_critic_loss.png "ddpg_critic_loss"
 [image5]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/ddpg_actor_loss.png "ddpg_actor_loss"
 [image5]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/ddpg_actor_loss.png "ddpg_actor_loss"
-[image6]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/TrainedAgentUnityScreenshot.png "TrainedAgentUnityScreenshot"
+[image6]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/TrainedAgentUnityScreenshot1.png "TrainedAgentUnityScreenshot"
 
 # Project report
 
