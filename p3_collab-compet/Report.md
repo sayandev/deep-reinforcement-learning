@@ -12,7 +12,7 @@
 
 ### Project's goal
 
-In this environment called Reacher, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal the agent is to maintain its position at the target location for as many time steps as possible. Additional information can be found [here](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher).
+ found [here](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher).
 
 ![Trained Agent][image1]
 
@@ -25,9 +25,9 @@ The observation space consists of each action is a vector with four numbers:
 
 ### Algorithm
 
-This project is an extension of the earlier project in applying [Deep Q Network](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf) to solve single agent navigation environment, however this project has a more complex environment with continuous action spaces and involved multiple agents. [Continuous control with deep reinforcement learning](https://arxiv.org/abs/1509.02971) been used to solve this project utilizing  some [refinements](https://blogs.unity3d.com/2018/09/11/ml-agents-toolkit-v0-5-new-resources-for-ai-researchers-available-now/). 
 
-DDPG algorithm is summarized below: 
+
+Deep Deterministic Policy Gradient (DDPG) algorithm is summarized below: 
 
 ![Pseudo Algo][image3]
 
