@@ -23,7 +23,7 @@ The task is episodic, and in order to solve the environment, both agents must ge
 
 ### Algorithm
 
-This project is an extension of the earlier project implemented in this course of [Learning Continious Control in Deep Reinforcement Learning](https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/Report.md), however this project has a more complex competitive environment involving two tennis players competing with each other. [Continuous control with deep reinforcement learning](https://arxiv.org/abs/1509.02971) been used to solve this project utilizing  some [refinements](https://blogs.unity3d.com/2018/09/11/ml-agents-toolkit-v0-5-new-resources-for-ai-researchers-available-now/). 
+This project is an extension of the earlier project implemented in this course of [Learning Continuous Control in Deep Reinforcement Learning](https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/Report.md), however this project has a more complex competitive environment involving two tennis players competing with each other. [Continuous control with deep reinforcement learning](https://arxiv.org/abs/1509.02971) been used to solve this project utilizing  some [refinements](https://blogs.unity3d.com/2018/09/11/ml-agents-toolkit-v0-5-new-resources-for-ai-researchers-available-now/). 
 
 
 Deep Deterministic Policy Gradient (DDPG) algorithm is summarized below: 
@@ -39,11 +39,11 @@ The actor contributes in continuous action space without need for extra layer of
 
 ### Model Architecture
 
-Following the [competitive enviornment](https://deepmind.com/blog/alphago-zero-learning-scratch/) used in the application of Deep Reinforcement Learning the DDPG agents adopted from the [previous project](https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/Report.md) is incorporated in the competitive Tennis environment of 2 players using a single Brain shared by the DDPG agent. The DDPG agent collect experiences from both Tennis players with the sahred replay buffer. The Neural network archityecture and hyper paramaters been modified for efficient training phase explained below. 
+Following the [competitive environment](https://deepmind.com/blog/alphago-zero-learning-scratch/) used in the application of Deep Reinforcement Learning the DDPG agents adopted from the [previous project](https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/Report.md) is incorporated in the competitive Tennis environment of 2 players using a single Brain shared by the DDPG agent. The DDPG agent collect experiences from both Tennis players with the shared replay buffer. The Neural network architecture and hyper parameters been modified for efficient training phase explained below.
 
 **Actor model:** Neural network with 2 hidden layers with 512 and 256 hidden nodes respectively; _tanh_ activation function been used in the last layer which performs state -> action mapping. Batch Normalization regularization technique been used for mini batch training.
 
-**Critic model:** Similar to Actor model except the final layer is fully connected which performs state -> argmax_Q  mapping. To avoid overfitting and making the learning proces efficient a drop out layer (with 0.2 probability) been added before the output layer.
+**Critic model:** Similar to Actor model except the final layer is fully connected which performs state -> argmax_Q  mapping. To avoid overfitting and making the learning process efficient a drop out layer (with 0.2 probability) been added before the output layer.
 
 **Hyper Parameter :** The actual configuration of the hyperparameters is:
 
@@ -60,11 +60,11 @@ Following the [competitive enviornment](https://deepmind.com/blog/alphago-zero-l
 
 #### Result
 
-The DDPG agent took 564 Episodes to achieve the average max rewards of 0.5 score in approximately 45 minutes using the GPU instance provided in the Udacity course workspace. As ecident in the plot scores fluctuate withon 300 and 500 episode however the average Max score increses gradually. Once the agent adapted the new technique the score increased significatnty after 500 episodes and achieve the goal quickly.
+The DDPG agent took 564 Episodes to achieve the average max rewards of 0.5 score in approximately 45 minutes using the GPU instance provided in the Udacity course workspace. As evident in the plot scores fluctuate within 300 and 500 episode however the average Max score increases gradually. Once the agent adapted the new technique the score increased significantly after 500 episodes and achieve the goal quickly.
 
 ![Score][image2]
 
-In the screenshot of the trained DDPG agents we can see thay performing pretty well in the competitive environment.
+In the screenshot of the trained DDPG agents we can see that they are performing pretty well in the competitive environment.
 
 ![TrainedAgent1][image6] 
 
