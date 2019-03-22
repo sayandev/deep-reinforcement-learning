@@ -59,7 +59,7 @@ Following the [competitive enviornment](https://deepmind.com/blog/alphago-zero-l
 
 #### Result
 
-The DDPG agent took 102 Episodes to achieve the average rewards of 30.13 in approximately 1 hour 45 minutes. 
+The DDPG agent took 564 Episodes to achieve the average max rewards of 0.5 score in approximately 45 minutes using the GPU instance provided in the Udacity course workspace. As ecident in the plot scores fluctuate withon 300 and 500 episode however the average Max score increses gradually. Once the agent adapted the new technique the score increased significatnty after 500 episodes and achieve the goal quickly.
 ![Score][image2]
 
 In the screenshot of the trained DDPG agents we can see thay are pretty well in tracing the moving target location for all 20 arms.
