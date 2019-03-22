@@ -54,7 +54,7 @@ Following the [competitive environment](https://deepmind.com/blog/alphago-zero-l
 
 ### Project Implemenation
 
-- Continuous_Control_Solution.ipynb - This Jupyter notebooks allows to train the agent and test the performace.
+- Collaboration_and_Competition_Tennis_Solution.ipynb - This Jupyter notebooks allows to train the agent and test the performace.
 - ddpg_agent.py - agent class implementation.
 - models.py - neural network implementations (PyTorch).
 
