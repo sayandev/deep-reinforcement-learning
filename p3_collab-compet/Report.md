@@ -78,4 +78,4 @@ In the screenshot of the trained DDPG agents we can see thay performing pretty w
 - Use a deeper network.
 - Incorporate some form of curiosity to [favorize exploration](https://arxiv.org/abs/1808.04355).
 - Trying out [Proximal Policy Optimization](https://arxiv.org/abs/1707.06347) as it performs comparably if not better than state-of-the-art approaches while being much simpler to implement and tune which may converge faster and shall be able to handle more complicated multi-agent in a more complex environment tasks.
-- The DDPG algorithm can be improved (robust) by applying [Prioritized experience replay](https://ieeexplore.ieee.org/document/8122622) using a special data structure [Sum Tree](https://github.com/rlcode/per)
+- The DDPG algorithm can be improved (robust) by applying [Prioritized experience replay](https://ieeexplore.ieee.org/document/8122622) using a special data structure [Sum Tree](https://github.com/rlcode/per) for similar competitive environment agents, such as soccer playing agents with more playing agents.
