@@ -1,6 +1,6 @@
 [//]: # (Image References)
 
-[image1]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/unity_reacher_ppo_agent.gif "Trained Agent"
+[image1]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p3_collab-compet/tennis.gif "Trained Agent"
 [image2]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/score.png "Score"
 [image3]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/ddpg_pseudo_algo.png "Pseudo Algo"
 [image4]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/ddpg_critic_loss.png "ddpg_critic_loss"
