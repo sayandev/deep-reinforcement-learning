@@ -1,7 +1,7 @@
 [//]: # (Image References)
 
 [image1]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p3_collab-compet/tennis.gif "Trained Agent"
-[image2]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/score.png "Score"
+[image2]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p3_collab-compet/score.png "Score"
 [image3]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/ddpg_pseudo_algo.png "Pseudo Algo"
 [image4]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/ddpg_critic_loss.png "ddpg_critic_loss"
 [image5]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/ddpg_actor_loss.png "ddpg_actor_loss"
@@ -22,6 +22,7 @@ The task is episodic, and in order to solve the environment, both agents must ge
 
 ### Algorithm
 
+This project is an extension of the earlier project implemented in this course of [Learning Continious Control in Deep Reinforcement Learning](https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/Report.md), however this project has a more complex competitive environment involving two tennis players competing with each other. [Continuous control with deep reinforcement learning](https://arxiv.org/abs/1509.02971) been used to solve this project utilizing  some [refinements](https://blogs.unity3d.com/2018/09/11/ml-agents-toolkit-v0-5-new-resources-for-ai-researchers-available-now/). 
 
 
 Deep Deterministic Policy Gradient (DDPG) algorithm is summarized below: 
@@ -37,17 +38,17 @@ The actor contributes in continuous action space without need for extra layer of
 
 ### Model Architecture
 
-20 individual DDPG agents corresponding to 20 agents in the environment and a single replay buffer shared by all the 20 DDPG agents. Later switched to a single DDPG agent with one replay buffer that has experiences collected from all 20 DDPG agents. Which results is to train a single brain rather than 20 brains which will be definitely quicker and having a single source of decision making will result in better performance with time. This scheme results in robust and better performance. However, in distributed environment training the brains separately might be more scalable.
+Following the [competitive enviornment](https://deepmind.com/blog/alphago-zero-learning-scratch/) used in the application of Deep Reinforcement Learning the DDPG agents adopted from the [previous project](https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/Report.md) is incorporated in the competitive Tennis environment of 2 players using a single Brain shared by the DDPG agent. The DDPG agent collect experiences from both Tennis players with the sahred replay buffer. The Neural network archityecture and hyper paramaters been modified for efficient training phase explained below. 
 
-**Actor model:** Neural network with 2 hidden layers with 400 and 300 hidden nodes respectively; _tanh_ activation function been used in the last layer which performs state -> action mapping. Batch Normalization regularization technique been used for mini batch training.
+**Actor model:** Neural network with 2 hidden layers with 512 and 256 hidden nodes respectively; _tanh_ activation function been used in the last layer which performs state -> action mapping. Batch Normalization regularization technique been used for mini batch training.
 
-**Critic model:** Similar to Actor model except the final layer is fully connected which performs state -> argmax_Q  mapping.
+**Critic model:** Similar to Actor model except the final layer is fully connected which performs state -> argmax_Q  mapping. To avoid overfitting and making the learning proces efficient a drop out layer (with 0.2 probability) been added before the output layer.
 
 **Hyper Parameter :** The actual configuration of the hyperparameters is:
 
-- Learning Rate: 1e-3 (in both Actor & Critic) soft update of target
-- Batch Size: 1024 with max time step of 1000 in each episode.
-- Replay Buffer: 1e6
+- Learning Rate: Actor=> 1e-4 & Critic=> 3e-4 with soft update of target => 2e-1.
+- Batch Size: 512 with max time step of 2000 in each episode.
+- Replay Buffer: 1e5
 - Gamma: 0.99 with weight decay set to 0
 
 ### Project Implemenation
