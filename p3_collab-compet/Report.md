@@ -2,11 +2,12 @@
 
 [image1]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p3_collab-compet/tennis.gif "Trained Agent"
 [image2]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p3_collab-compet/score.png "Score"
-[image3]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/ddpg_pseudo_algo.png "Pseudo Algo"
-[image4]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/ddpg_critic_loss.png "ddpg_critic_loss"
-[image5]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/ddpg_actor_loss.png "ddpg_actor_loss"
-[image5]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/ddpg_actor_loss.png "ddpg_actor_loss"
-[image6]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/TrainedAgentUnityScreenshot1.png "TrainedAgentUnityScreenshot"
+[image3]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p3_collab-compet/ddpg_pseudo_algo.png "Pseudo Algo"
+[image4]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p3_collab-compet/ddpg_critic_loss.png "ddpg_critic_loss"
+[image5]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p3_collab-compet/ddpg_actor_loss.png "ddpg_actor_loss"
+[image6]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/TrainedAgent1.png "TrainedAgentUnityScreenshot1"
+[image7]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/TrainedAgent2.png "TrainedAgentUnityScreenshot2"
+[image8]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/TrainedAgent3.png "TrainedAgentUnityScreenshot3"
 
 # Project report
 
@@ -60,11 +61,16 @@ Following the [competitive enviornment](https://deepmind.com/blog/alphago-zero-l
 #### Result
 
 The DDPG agent took 564 Episodes to achieve the average max rewards of 0.5 score in approximately 45 minutes using the GPU instance provided in the Udacity course workspace. As ecident in the plot scores fluctuate withon 300 and 500 episode however the average Max score increses gradually. Once the agent adapted the new technique the score increased significatnty after 500 episodes and achieve the goal quickly.
+
 ![Score][image2]
 
 In the screenshot of the trained DDPG agents we can see thay are pretty well in tracing the moving target location for all 20 arms.
 
-![TrainedAgentUnityScreenshot][image6] 
+![TrainedAgentUnityScreenshot1][image6] 
+
+![TrainedAgentUnityScreenshot2][image7] 
+
+![TrainedAgentUnityScreenshot3][image8] 
 
 
 ### Ideas for Future Work
