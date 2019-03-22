@@ -11,8 +11,7 @@
 # Project report
 
 ### Project's goal
-
- found [here](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher).
+In this environment, two agents control rackets collabortate and compete to play tennis. If an agent hits the ball over the net, it receives a reward of +0.1. If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a reward of -0.01. Thus, the goal of each agent is to keep the ball in play, as such playing as long as possible in an episode. Additional information can be found [here](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#tennis).
 
 ![Trained Agent][image1]
 
