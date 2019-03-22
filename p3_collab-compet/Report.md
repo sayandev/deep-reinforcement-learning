@@ -5,9 +5,9 @@
 [image3]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p3_collab-compet/ddpg_pseudo_algo.png "Pseudo Algo"
 [image4]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p3_collab-compet/ddpg_critic_loss.png "ddpg_critic_loss"
 [image5]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p3_collab-compet/ddpg_actor_loss.png "ddpg_actor_loss"
-[image6]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/TrainedAgent1.png "TrainedAgentUnityScreenshot1"
-[image7]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/TrainedAgent2.png "TrainedAgentUnityScreenshot2"
-[image8]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p2_continuous-control/TrainedAgent3.png "TrainedAgentUnityScreenshot3"
+[image6]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p3_collab-compet/TrainedAgent1.png "TrainedAgentUnityScreenshot1"
+[image7]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p3_collab-compet/TrainedAgent2.png "TrainedAgentUnityScreenshot2"
+[image8]: https://github.com/sayandev/deep-reinforcement-learning/blob/master/p3_collab-compet/TrainedAgent3.png "TrainedAgentUnityScreenshot3"
 
 # Project report
 
