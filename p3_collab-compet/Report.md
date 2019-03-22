@@ -15,11 +15,9 @@ In this environment, two agents control rackets collabortate and compete to play
 
 ![Trained Agent][image1]
 
-The observation space consists of each action is a vector with four numbers:
+The observation space consists of each action is a vector with eight variables corresponding to the position and velocity of the ball and racket. Each agent receives its own, local observation. Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping.
 
-- *State space* => 33 dimensional continuous vector, consisting of position, rotation, velocity, and angular velocities of the arm.
-- *Action space* => 4 dimensional continuous vector, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
-- *Solution criteria* => the environment is considered as solved when the agent gets an average score of +30 over 100 consecutive episodes (averaged over all agents in case of multi agent environment).
+The task is episodic, and in order to solve the environment, both agents must get an average score of +0.5 (over 100 consecutive episodes, after taking the maximum over both agents).
 
 
 ### Algorithm
