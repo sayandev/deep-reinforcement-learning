@@ -66,11 +66,11 @@ The DDPG agent took 564 Episodes to achieve the average max rewards of 0.5 score
 
 In the screenshot of the trained DDPG agents we can see thay are pretty well in tracing the moving target location for all 20 arms.
 
-![TrainedAgentUnityScreenshot1][image6] 
+![TrainedAgent1][image6] 
 
-![TrainedAgentUnityScreenshot2][image7] 
+![TrainedAgent2][image7] 
 
-![TrainedAgentUnityScreenshot3][image8] 
+![TrainedAgent3][image8] 
 
 
 ### Ideas for Future Work
