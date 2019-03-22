@@ -64,7 +64,7 @@ The DDPG agent took 564 Episodes to achieve the average max rewards of 0.5 score
 
 ![Score][image2]
 
-In the screenshot of the trained DDPG agents we can see thay are pretty well in tracing the moving target location for all 20 arms.
+In the screenshot of the trained DDPG agents we can see thay performing pretty well in the competitive environment.
 
 ![TrainedAgent1][image6] 
 
@@ -76,7 +76,6 @@ In the screenshot of the trained DDPG agents we can see thay are pretty well in 
 ### Ideas for Future Work
 
 - Use a deeper network.
-- Test the implementation using raw pixels.
 - Incorporate some form of curiosity to [favorize exploration](https://arxiv.org/abs/1808.04355).
-- Trying out [Proximal Policy Optimization](https://arxiv.org/abs/1707.06347).
-- The DDPG algorithm can be improved (robust) by applying [Prioritized experience replay](https://ieeexplore.ieee.org/document/8122622).
+- Trying out [Proximal Policy Optimization](https://arxiv.org/abs/1707.06347) as it performs comparably if not better than state-of-the-art approaches while being much simpler to implement and tune which may converge faster and shall be able to handle more complicated multi-agent in a more complex environment tasks.
+- The DDPG algorithm can be improved (robust) by applying [Prioritized experience replay](https://ieeexplore.ieee.org/document/8122622) using a special data structure [Sum Tree](https://github.com/rlcode/per)
